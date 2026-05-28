@@ -192,15 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
       renderDashboard();
     } else if (tabId === "study") {
       pageTitle.textContent = `${selectedTitle} 학습된 카드`;
-      pageDescription.textContent = "모의 면접을 진행하며 해금된 질문 카드들을 한눈에 복습합니다.";
+      pageDescription.textContent = "셀프면접 리허설을 진행하며 해금된 질문 카드들을 한눈에 복습합니다.";
       renderStudyDeck();
     } else if (tabId === "bookmarks") {
       pageTitle.textContent = `${selectedTitle} 중요 노트`;
       pageDescription.textContent = "별표 체크한 질문과 직접 작성해둔 오답 카드를 집중적으로 점검합니다.";
       renderBookmarks();
     } else if (tabId === "quiz") {
-      pageTitle.textContent = `${selectedTitle} 모의 면접`;
-      pageDescription.textContent = "랜덤 엄선된 5개 문항을 시간 내에 답변하며 강점과 취약을 파악해 보세요.";
+      pageTitle.textContent = `${selectedTitle} 직무 셀프면접 리허설`;
+      pageDescription.textContent = "랜덤 엄선된 5개 문항에 대해 소리 내어 답변해 본 후, 해답을 확인하여 자가 진단하는 면접 리허설 공간입니다.";
       resetQuizUI();
     }
   }
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     } else {
       dailyQuoteHeader.textContent = "도감 미해금";
-      dailyQuoteText.textContent = "아직 발견된 질문이 없습니다. 모의 면접을 통해 첫 번째 카드를 해금해 보세요!";
+      dailyQuoteText.textContent = "아직 발견된 질문이 없습니다. 셀프면접 리허설을 통해 첫 번째 카드를 해금해 보세요!";
       dailyQuoteCard.onclick = null;
     }
 
@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Render cards
     if (filtered.length === 0) {
-      renderEmptyState(studyCardsGrid, "아직 발견된 질문이 없습니다. 모의 면접을 먼저 시작하여 카드를 획득해 보세요!");
+      renderEmptyState(studyCardsGrid, "아직 발견된 질문이 없습니다. 셀프면접 리허설을 먼저 시작하여 카드를 획득해 보세요!");
       return;
     }
 
@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
         warningMsg.style.color = "var(--danger)";
         warningMsg.style.marginTop = "1rem";
         warningMsg.style.fontWeight = "600";
-        warningMsg.textContent = "※ 공통 분야는 단독으로 모의 면접을 진행할 수 없습니다. 상단 또는 대시보드 메뉴에서 직무 분야(사무, 기계, SW 등)를 선택한 뒤 모의 면접을 시작해 주세요.";
+        warningMsg.textContent = "※ 공통 분야는 단독으로 셀프면접 리허설을 진행할 수 없습니다. 상단 또는 대시보드 메뉴에서 직무 분야(사무, 기계, SW 등)를 선택한 뒤 셀프면접 리허설을 시작해 주세요.";
         quizWelcomePanel.appendChild(warningMsg);
       } else {
         warningMsg.style.display = "block";
@@ -647,7 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Prevent taking quiz for common category
     if (state.selectedCategory === "common") {
-      alert("공통 분야는 단독으로 모의 면접을 진행할 수 없습니다. 직무 분야(사무, 기계, SW 등)를 선택해 주세요.");
+      alert("공통 분야는 단독으로 셀프면접 리허설을 진행할 수 없습니다. 직무 분야(사무, 기계, SW 등)를 선택해 주세요.");
       return;
     }
 
@@ -795,7 +795,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Custom feedback comments
     if (state.quiz.score === 100) {
       quizFeedbackTitle.textContent = "완벽합니다! 직무 역량 종결자 🏆";
-      quizFeedbackMessage.textContent = "모의 면접에 출제된 모든 질문에 암기 완료 판정을 받았습니다. 좋은 결과가 있을 것입니다!";
+      quizFeedbackMessage.textContent = "셀프면접 리허설에 출제된 모든 질문에 암기 완료 판정을 받았습니다. 좋은 결과가 있을 것입니다!";
     } else if (state.quiz.score >= 70) {
       quizFeedbackTitle.textContent = "합격 안정권 수준 👍";
       quizFeedbackMessage.textContent = "직무 핵심 이론을 탄탄히 학습해 가고 계십니다. 새로 해금된 오답 카드들은 [학습된 카드]에서 정독해 보세요.";
