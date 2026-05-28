@@ -52,5 +52,5 @@
 ---
 
 ## 5. 최종 배포 정보 (Final Vercel Deployment)
-- **Vercel 배포 URL**: `https://skill-deck.vercel.app/` *(최종 배포 완료 후 본인의 Vercel 배포 주소로 변경하여 제출)*
+- **Vercel 배포 URL**: [https://skilldecklearninterview.vercel.app/](https://skilldecklearninterview.vercel.app/)
 - **배포 방식**: GitHub 저장소와 Vercel 프로젝트를 다이렉트 연동하여 자동 빌드 및 CI/CD 환경 구축 완료.

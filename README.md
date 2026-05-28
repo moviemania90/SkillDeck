@@ -3,7 +3,7 @@
 SkillDeck은 다양한 전공 및 직업 분야(사무/행정, 기계, 전기, 전자, ICT/SW, 화학)의 면접에 자주 등장하는 핵심 지식을 정리하고, **모의 면접 테스트를 통해 학습 카드를 발견(해금)하고 숙달하는 성장형** 웹 기반 **직무 역량 면접 대비 서비스**입니다.
 
 ## 🔗 배포 링크 (Vercel)
-> **[SkillDeck Live Deployment URL](https://skill-deck.vercel.app/)** *(사용자 배포 후 여기에 최종 URL 기입)*
+> **[SkillDeck Live Deployment URL](https://skilldecklearninterview.vercel.app/)**
 
 ---
 

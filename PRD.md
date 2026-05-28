@@ -3,6 +3,7 @@
 **프로젝트 명**: SkillDeck (직무 역량 면접 스마트 해금 학습 서비스)  
 **작성일**: 2026-05-28  
 **대상 학기**: 2026년 봄학기 AI 프로그래밍 입문 (Assignment 4)  
+**배포 URL**: [https://skilldecklearninterview.vercel.app/](https://skilldecklearninterview.vercel.app/)  
 
 ---
 
