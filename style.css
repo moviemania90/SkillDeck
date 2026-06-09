@@ -11,11 +11,11 @@
   --panel-glass-hover: rgba(30, 41, 59, 0.6);
   --border-glass: rgba(255, 255, 255, 0.08);
   --border-glass-focused: rgba(255, 255, 255, 0.2);
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
+
   /* System Colors */
   --danger: #ef4444;
   --warning: #f59e0b;
@@ -26,48 +26,68 @@
   --theme-color: #3b82f6;
   --theme-color-rgb: 59, 130, 246;
   --theme-glow: rgba(59, 130, 246, 0.15);
-  
+
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   --sidebar-width: 260px;
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
 }
 
 /* Theme Class Overrides (Injected by JS on body & local elements) */
-body.theme-office, .theme-office {
-  --theme-color: #a78bfa; /* Lavender */
+body.theme-office,
+.theme-office {
+  --theme-color: #a78bfa;
+  /* Lavender */
   --theme-color-rgb: 167, 139, 250;
   --theme-glow: rgba(167, 139, 250, 0.15);
 }
-body.theme-mechanical, .theme-mechanical {
-  --theme-color: #f97316; /* Warm Bronze / Orange */
+
+body.theme-mechanical,
+.theme-mechanical {
+  --theme-color: #f97316;
+  /* Warm Bronze / Orange */
   --theme-color-rgb: 249, 115, 22;
   --theme-glow: rgba(249, 115, 22, 0.15);
 }
-body.theme-electrical, .theme-electrical {
-  --theme-color: #eab308; /* Amber / Gold */
+
+body.theme-electrical,
+.theme-electrical {
+  --theme-color: #eab308;
+  /* Amber / Gold */
   --theme-color-rgb: 234, 179, 8;
   --theme-glow: rgba(234, 179, 8, 0.15);
 }
-body.theme-electronics, .theme-electronics {
-  --theme-color: #06b6d4; /* Cyan */
+
+body.theme-electronics,
+.theme-electronics {
+  --theme-color: #06b6d4;
+  /* Cyan */
   --theme-color-rgb: 6, 182, 212;
   --theme-glow: rgba(6, 182, 212, 0.15);
 }
-body.theme-software, .theme-software {
-  --theme-color: #3b82f6; /* Electric Blue */
+
+body.theme-software,
+.theme-software {
+  --theme-color: #3b82f6;
+  /* Electric Blue */
   --theme-color-rgb: 59, 130, 246;
   --theme-glow: rgba(59, 130, 246, 0.15);
 }
-body.theme-chemical, .theme-chemical {
-  --theme-color: #10b981; /* Emerald / Teal */
+
+body.theme-chemical,
+.theme-chemical {
+  --theme-color: #10b981;
+  /* Emerald / Teal */
   --theme-color-rgb: 16, 185, 129;
   --theme-glow: rgba(16, 185, 129, 0.15);
 }
-body.theme-common, .theme-common {
-  --theme-color: #64748b; /* Slate / Neutral */
+
+body.theme-common,
+.theme-common {
+  --theme-color: #64748b;
+  /* Slate / Neutral */
   --theme-color-rgb: 100, 116, 139;
   --theme-glow: rgba(100, 116, 139, 0.15);
 }
@@ -89,7 +109,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   display: flex;
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 20%, rgba(var(--theme-color-rgb), 0.08) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(15, 23, 42, 0.6) 0%, transparent 50%);
   background-attachment: fixed;
@@ -101,13 +121,16 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border-glass);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
@@ -308,8 +331,15 @@ header {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================================
@@ -746,7 +776,8 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.card-answer-scroll ul, .card-answer-scroll ol {
+.card-answer-scroll ul,
+.card-answer-scroll ol {
   margin-left: 1.25rem;
   margin-bottom: 0.75rem;
 }
@@ -790,9 +821,20 @@ header {
   border-color: var(--theme-color);
 }
 
-.rating-btn.rate-easy:hover { background-color: var(--success); border-color: var(--success); }
-.rating-btn.rate-medium:hover { background-color: var(--warning); border-color: var(--warning); }
-.rating-btn.rate-hard:hover { background-color: var(--danger); border-color: var(--danger); }
+.rating-btn.rate-easy:hover {
+  background-color: var(--success);
+  border-color: var(--success);
+}
+
+.rating-btn.rate-medium:hover {
+  background-color: var(--warning);
+  border-color: var(--warning);
+}
+
+.rating-btn.rate-hard:hover {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}
 
 .card-status-badge {
   display: inline-flex;
@@ -809,17 +851,37 @@ header {
   border-radius: 50%;
 }
 
-.status-new { color: var(--text-muted); }
-.status-new::before { background: var(--text-muted); }
+.status-new {
+  color: var(--text-muted);
+}
 
-.status-mastered { color: var(--success); }
-.status-mastered::before { background: var(--success); }
+.status-new::before {
+  background: var(--text-muted);
+}
 
-.status-reviewing { color: var(--warning); }
-.status-reviewing::before { background: var(--warning); }
+.status-mastered {
+  color: var(--success);
+}
 
-.status-weak { color: var(--danger); }
-.status-weak::before { background: var(--danger); }
+.status-mastered::before {
+  background: var(--success);
+}
+
+.status-reviewing {
+  color: var(--warning);
+}
+
+.status-reviewing::before {
+  background: var(--warning);
+}
+
+.status-weak {
+  color: var(--danger);
+}
+
+.status-weak::before {
+  background: var(--danger);
+}
 
 /* Custom Question Tag (New / Custom) */
 .custom-card-indicator {
@@ -990,7 +1052,7 @@ header {
   background: var(--panel-glass);
   border: 1px solid var(--border-glass);
   border-radius: 24px;
-  padding: 2.5rem;
+  padding: 4.5rem 2.5rem 2.5rem 2.5rem;
   min-height: 280px;
   display: flex;
   flex-direction: column;
@@ -1098,9 +1160,17 @@ header {
   margin-bottom: 0.25rem;
 }
 
-.val-easy { color: var(--success); }
-.val-medium { color: var(--warning); }
-.val-hard { color: var(--danger); }
+.val-easy {
+  color: var(--success);
+}
+
+.val-medium {
+  color: var(--warning);
+}
+
+.val-hard {
+  color: var(--danger);
+}
 
 /* ==========================================================================
    9. Modal Architecture (Add Custom Card)
@@ -1137,8 +1207,15 @@ header {
 }
 
 @keyframes modalSlide {
-  from { transform: scale(0.95) translateY(20px); opacity: 0; }
-  to { transform: scale(1) translateY(0); opacity: 1; }
+  from {
+    transform: scale(0.95) translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-header {
@@ -1195,7 +1272,9 @@ header {
   color: var(--text-secondary);
 }
 
-.form-input, .form-textarea, .form-select {
+.form-input,
+.form-textarea,
+.form-select {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-glass);
   border-radius: 10px;
@@ -1208,7 +1287,9 @@ header {
   width: 100%;
 }
 
-.form-input:focus, .form-textarea:focus, .form-select:focus {
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
   border-color: var(--theme-color);
   box-shadow: 0 0 0 3px var(--theme-glow);
   background-color: rgba(255, 255, 255, 0.05);
