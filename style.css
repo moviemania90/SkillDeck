@@ -181,6 +181,7 @@ body {
   font-weight: 800;
   background: linear-gradient(135deg, #ffffff 60%, rgba(var(--theme-color-rgb), 0.8));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
